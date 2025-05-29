@@ -2,84 +2,69 @@
 
 ---
 
+## 项目简介
 
-
-详细介绍项目的基本信息，包括项目简介、功能介绍、安装步骤、使用方法、运行环境要求等。例如说明项目是用于什么场景的软件、如何在本地克隆仓库并运行
+本项目是在基于CIDR的情况下，实现IP数据包分组转发的模拟，实现了自定义数据包模拟、添加路由等功能
 
 
 
 ## 项目结构
 
 ```text
-│  pom.xml
-│  README.md     
+├─pom.xml											//spring配置文件
+├─README.md     
 ├─src
 │  └─main
 │      ├─java
-│      │  │  module-info.java
 │      │  │  
 │      │  └─org
 │      │      └─mirac
 │      │          └─routingsimulator
-│      │              │  RoutingSimulator.java
+│      │              │  RoutingSimulator.java		//UI启动类
 │      │              │  
 │      │              ├─entity
-│      │              │      DataPacket.java
-│      │              │      RouteEntry.java
+│      │              │      DataPacket.java		//数据包实体类
+│      │              │      RouteEntry.java		//路由实体类
 │      │              │      
 │      │              ├─routers
-│      │              │      Router.java
-│      │              │      
+│      │              │      Router.java			//路由表类
+│      │              │  
+|	   |              ├─test
 │      │              ├─utils
-│      │              │      DataUtils.java
-│      │              │      IPUtils.java
-│      │              │      RouterUtils.java
-│      │              │      SimulationUtils.java
+│      │              │      DataUtils.java			//数据方法类
+│      │              │      IPUtils.java			//IP方法类
+│      │              │      RouterUtils.java		//路由方法类
+│      │              │      SimulationUtils.java	//模拟方法类
 │      │              │      
 │      │              └─view
-│      │                      Mapview.java
+│      │                      Mapview.java			//UI视图类
 │      │                      
 │      └─resources
-│          └─org
-│              └─mirac
-│                  └─routingsimulator
-│                          hello-view.fxml
 │                          
 └─target
-    ├─classes
-    │  │  module-info.class
-    │  │  
-    │  └─org
-    │      └─mirac
-    │          └─routingsimulator
-    │              │  hello-view.fxml
-    │              │  RoutingSimulator.class
-    │              │  
-    │              ├─entity
-    │              │      DataPacket.class
-    │              │      RouteEntry.class
-    │              │      
-    │              ├─routers
-    │              │      Router.class
-    │              │      
-    │              ├─utils
-    │              │      DataUtils.class
-    │              │      IPUtils.class
-    │              │      RouterUtils.class
-    │              │      SimulationUtils$1.class
-    │              │      SimulationUtils$2.class
-    │              │      SimulationUtils.class
-    │              │      
-    │              └─view
-    │                      Mapview.class
-    │                      
-    └─generated-sources
-        └─annotations
 ```
 
 
 
+## 功能介绍
 
+这个项目只实现了日志模拟，并未实现真实发包。在代码中编写逻辑进行转发的模拟。实现了默认的模拟、自定义数据包模拟以及添加路由的功能。用户可以自行添加路由，来更加深入地了解基于CIDR的IP分组转发过程。
+
+## 安装步骤
+
+本项目只使用了javafx。因此只需要将pom.xml进行maven的配置导入即可。
+
+
+
+## 使用方法
+
+运行RoutingSimulator.java中的main方法即可运行本项目。
+
+
+
+## 运行环境要求
+
+根据pom.xml的配置要求配置即可。
 
 
 
