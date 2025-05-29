@@ -11,7 +11,7 @@
 ## 项目结构
 
 ```text
-├─pom.xml											//spring配置文件
+├─pom.xml									//spring配置文件
 ├─README.md     
 ├─src
 │  └─main
@@ -29,7 +29,7 @@
 │      │              ├─routers
 │      │              │      Router.java			//路由表类
 │      │              │  
-|	   |              ├─test
+|	     |              ├─test
 │      │              ├─utils
 │      │              │      DataUtils.java			//数据方法类
 │      │              │      IPUtils.java			//IP方法类
